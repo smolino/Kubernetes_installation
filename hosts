@@ -1,0 +1,17 @@
+[kubernetes-master-nodes]
+master-node ansible_host=<ip-address>
+
+[kubernetes-worker-nodes]
+worker-node ansible_host=<ip-address>
+
+[kubernetes-master-nodes:vars]
+timeout=60
+ansible_become=yes
+ansible_ssh_user=<user>
+ansible_password=<password>
+
+[kubernetes-worker-nodes:vars]
+timeout=60
+ansible_become=yes
+ansible_ssh_user=<user>
+ansible_password=<password>
